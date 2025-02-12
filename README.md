@@ -105,5 +105,5 @@ Com este projeto, conseguimos controlar um servomotor utilizando PWM no Raspberr
 ## Vídeo Demonstrativo
 
 Para assistir ao vídeo associado a esta simulação, acesse o link:
-[Vídeo da Simulação](https://www.dropbox.com/scl/fi/i32f4t9dqggn4c1durb4o/2025-02-04-08-52-05.mkv?rlkey=s6ofq9yumuts3h8chte052cuj\&dl=0)
+[Vídeo da Simulação](https://drive.google.com/file/d/1PzPxoAWIK5ZTWq-TgfTG_93DT0bdK0Oh/view?usp=sharing)
 
