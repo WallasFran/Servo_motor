@@ -27,17 +27,19 @@ int main() {
     uint canal_pwm = pwm_gpio_to_slice_num(MOTOR_PIN);  // Obtém o número do "slice" (canal) PWM associado ao pino GPIO 22.
     pwm_set_enabled(canal_pwm, true);   // Habilita o PWM no canal selecionado para o pino.
 
-    while (true) {                     // Inicia um loop infinito para controlar o servo continuamente.
+    while (true) {   
+        printf("Movimento 0 a 180 graus\n");                  // Inicia um loop infinito para controlar o servo continuamente.
         ajustar_posicao_servo(canal_pwm, 2400);  // Brilho (12%) Move o servo para a posição de 180 graus (largura do pulso de 2400 microssegundos).
         sleep_ms(5000);                // Aguarda 5 segundos.
-
+        printf("Movimento 180 a 90 graus\n");
         ajustar_posicao_servo(canal_pwm, 1470);  // Brilho (7.35%) Move o servo para a posição de 90 graus (largura do pulso de 1470 microssegundos).
         sleep_ms(5000);                // Aguarda 5 segundos.
-
+        printf("Movimento 90 a 0 graus\n");
         ajustar_posicao_servo(canal_pwm, 500);   // Brilho (2.5%) Move o servo para a posição de 0 graus (largura do pulso de 500 microssegundos).
         sleep_ms(5000);                // Aguarda 5 segundos.
 
         // Movimento suave de 0° a 180° e de volta para 0°, repetido duas vezes.
+        printf("Movimento suave entre 0 e 180 graus\n");
         for (int i = 0; i < 2; i++) {  // Repete o movimento suave duas vezes.
             // Movimento suave de 0° a 180° (aumentando a largura do pulso de 500 a 2400 microssegundos).
             for (uint32_t largura_pulso = 500; largura_pulso <= 2400; largura_pulso += 5) {  // Renomeado para largura_pulso
